@@ -1,0 +1,398 @@
+/* النمط العام لجميع العناصر */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #000;
+  box-sizing: border-box;
+}
+
+/* تخصيص الجسم بشكل عام */
+body {
+  direction: rtl;
+  overflow-x: hidden;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* تخصيص الهيدر */
+#header {
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  display: flex;
+  background-color: #00695c;
+}
+
+#header img {
+  width: 50px;
+  height: 50px;
+}
+
+#list {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  gap: 70px;
+  padding-left: 3rem;
+  
+
+}
+
+#header a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+#header a:hover {
+  color: #ffeb3b;
+}
+
+#cc {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  color: #fff;
+}
+
+/* تنسيق القائمة في الهيدر */
+ul {
+  list-style: none;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: flex-end; /* توجيه العناصر إلى الجهة اليمنى */
+  text-align: right;         /* محاذاة النصوص داخل العناصر إلى اليمين */
+  margin-right: 20px;        /* إبعاد القائمة قليلاً عن الجهة اليمنى */
+  margin-left: auto;         /* إضافة هذه الخاصية لدفع القائمة إلى اليمين */
+}
+
+
+ul a {
+  transition: 0.4s;
+  margin-right: 1rem;
+}
+
+ul a:hover {
+  color: #ffeb3b;
+}
+
+/* تخصيص القسم الرئيسي */
+h1 {
+  display: flex;           /* لتمكين استخدام الخصائص الخاصة بـ flexbox */
+  align-items: flex-start; /* محاذاة العناصر للجزء العلوي */
+  justify-content: center; /* توسيط النص أفقيًا */
+  color: #004d40;          /* اللون المحدد للنص */
+  font-size: 2.5rem;       /* حجم النص */
+  text-align: center;      /* التأكد من أن النص سيكون في المنتصف */
+  margin: 0;               /* إزالة المسافات الزائدة */
+  padding-bottom: 4rem;
+  display: inline; /* يجعل النص والصورة يظهران في سطر واحد */
+  vertical-align: middle; /* محاذاة الصورة والنص عموديًا */
+}
+
+.logo2 {
+  width: 60px !important; /* حجم الصورة */
+  height: auto !important; /* الحفاظ على النسبة الأصلية للصورة */
+  margin-left: 10px !important; /* مسافة بين الصورة والنص */
+  
+
+
+}
+
+
+#main {
+  align-items: center;
+  padding: 2rem;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+#main img {
+  width: 40%;
+  margin-left: 1.5rem;
+  border-radius: 8px;
+}
+
+#main p {
+  font-size: 1.4rem;
+  width: 100%;
+  padding-left: 1rem;
+  font-weight: bold;
+  padding-top: 2rem;
+}
+
+/* تخصيص قسم الكتب */
+#books-section {
+  margin-top: 50px;
+  padding: 2rem 0;
+}
+
+.books-section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00695c;
+  margin-bottom: 30px;
+}
+
+/* تخصيص مظهر الأقسام */
+#category-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+#category-list li {
+  display: inline-block;
+}
+
+#category-list li a {
+  color: #00695c;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#category-list li a:hover {
+  background-color: #f1f1f1;
+}
+
+#category-list li a.active {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+/* تخصيص الكتب */
+#books-container {
+  display: flex;
+  flex-direction: column; /* ترتيب الفئات عموديًا */
+  padding: 0 2rem;
+}
+
+/* تخصيص كل فئة كتب */
+.book-category {
+  display: flex;
+  flex-direction: row; /* ترتيب الكتب أفقيًا */
+  flex-wrap: nowrap; /* منع التفاف الكتب */
+  gap: 30px; /* المسافة بين الكتب */
+  overflow-x: auto; /* السماح بالتمرير الأفقي */
+  scroll-behavior: smooth; /* تمرير سلس */
+  padding: 1rem 0; /* إضافة مسافة داخلية */
+}
+
+/* إخفاء شريط التمرير الافتراضي لتحسين المظهر (اختياري) */
+.book-category::-webkit-scrollbar {
+  height: 8px;
+}
+
+.book-category::-webkit-scrollbar-thumb {
+  background-color: #00695c;
+  border-radius: 10px;
+}
+
+.book-category::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* تخصيص كل كتاب */
+.book-item {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* ترتيب الصورة وتفاصيل الكتاب عموديًا */
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-width: 220px; /* عرض ثابت للكتاب */
+}
+
+/* تخصيص صورة الكتاب */
+.book-item img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تخصيص تفاصيل الكتاب */
+.book-details {
+  display: flex;
+  flex-direction: row; /* ترتيب العنوان وزر التحميل أفقيًا */
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* المسافة بين العنوان والزر */
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.book-details h3 {
+  font-size: 16px; /* تصغير حجم النص ليناسب الترتيب الأفقي */
+  color: #333;
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #00695c, #004d40);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 5px;
+  max-width: 100px; /* تحديد عرض النص لمنع التجاوز */
+  white-space: nowrap; 
+  overflow: hidden;
+  /* text-overflow: ellipsis; إضافة نقاط إذا كان النص طويلاً */
+}
+
+.book-details p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* زر تحميل الكتب */
+.download-btn {
+  color: #fff;
+  background: linear-gradient(145deg, #00695c, #004d40);
+  padding: 8px 16px; /* تصغير حجم الزر ليناسب الترتيب الأفقي */
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px; /* تصغير حجم النص */
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+  background: linear-gradient(145deg, #004d40, #00695c);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  border: 2px solid #ffeb3b;
+}
+
+.download-btn:active {
+  background: linear-gradient(145deg, #004d40, #00695c);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+/* استجابة على الشاشات الصغيرة */
+@media (max-width: 1024px) {
+  .book-item {
+    min-width: 200px; /* تقليل عرض الكتاب */
+  }
+
+  .book-details h3 {
+    font-size: 14px; /* تصغير النص أكثر */
+    max-width: 80px; /* تقليل عرض النص */
+  }
+
+  .download-btn {
+    padding: 6px 12px; /* تصغير الزر */
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-item {
+    min-width: 180px; /* تقليل عرض الكتاب للشاشات الصغيرة */
+  }
+
+  .book-details h3 {
+    font-size: 13px;
+    max-width: 70px;
+  }
+
+  .download-btn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-item {
+    min-width: 160px; /* تقليل عرض الكتاب بشكل أكبر */
+  }
+
+  .book-details h3 {
+    font-size: 12px;
+    max-width: 60px;
+  }
+
+  .download-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}
+
+/* Footer Section */
+#footer {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #00695c;
+}
+
+#footer h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffeb3b;
+  transform: scale(1.1);
+}
+
+#footer p {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.book-item img:hover::after {
+  content: "انقر للمعاينة";
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}

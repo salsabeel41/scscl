@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>مكتبة كلية العلوم الرياضية والحاسوب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/logo.jpg"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header">
+        <img src="images/logo.jpg" alt="Logo">
+        <ul id="list">
+            <li><a href="home.html">الرئيسة</a></li>
+            <li><a href="#main">حول</a></li>
+            <li><a href="#books-section" onclick="showCategory('إحصاء')">الكتب</a></li>
+            <li><a href="#footer">اتصل بنا</a></li>
+        </ul>
+        <p id="cc">جامعة الجزيرة</p>
+    </div>
+
+    <!-- Main Section -->
+    <div id="main">
+        <img src="images/scscl.jpg" alt="Image" />
+        <section>
+           <img src="images/uofg.png" alt="" class="logo2"> <h1>مكتبة كلية العلوم الرياضية والحاسوب</h1> <img src="images/uofg.png" alt="" class="logo2">
+            <p>
+                مرحبا بكم في موقع مكتبة كلية العلوم الرياضية والحاسوب المصمم لتوفير وصول سهل وسريع إلى مصادر المعلومات والموارد التعليمية التي تدعم البرامج الأكاديمية والبحثية في الكلية.
+            </p>
+            <p>
+                يهدف الموقع إلى تعزيز جودة التعليم والبحث من خلال توفير بيئة إلكترونية متميزة للطلاب وأعضاء هيئة التدريس، حيث يمكنهم الوصول إلى الكتب والمجلات الإلكترونية، والموارد التعليمية الرقمية، وخدمات البحث والاسترجاع.
+            </p>
+            <p>
+                يعد الموقع أداة حيوية لتعزيز المعرفة والابتكار في مجال العلوم الرياضية والحاسوب، ويسهم في تحقيق أهداف الكلية في توفير تعليم متميز وبحث علمي رائد.
+            </p>
+        </section>
+    </div>
+
+    <!-- Books Section -->
+    <section id="books-section">
+        <h2 class="books-section-title">الكتب الأكاديمية</h2>
+        
+        <!-- Category List -->
+        <ul id="category-list">
+            <li><a href="javascript:void(0);" class="active" onclick="showCategory('إحصاء')">إحصاء</a></li>
+            <li><a href="javascript:void(0);" onclick="showCategory('رياضيات')">رياضيات</a></li>
+            <li><a href="javascript:void(0);" onclick="showCategory('علوم-الحاسوب-التطبيقية')">علوم الحاسوب التطبيقية</a></li>
+            <li><a href="javascript:void(0);" onclick="showCategory('علوم-الحاسوب')">علوم الحاسوب</a></li>
+        </ul>
+        
+        <!-- Books Container -->
+        <div id="books-container">
+            <!-- Statistics Category -->
+            <div class="book-category" id="إحصاء">
+                <div class="book-item">
+                    <img src="images/استدلالي.jpg" alt="إحصاء استدلالي" onclick="window.open('https://drive.google.com/file/d/16FgVVrX2A2y4myYebn32MM3sGLlsqO4e/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>إحصاء استدلالي</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=16FgVVrX2A2y4myYebn32MM3sGLlsqO4e" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <img src="images/وصفي.jpg" alt="إحصاء وصفي" onclick="window.open('https://drive.google.com/file/d/17uIOq9XZfChDQXtifYW39t27d9IJrUMC/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>إحصاء وصفي</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=17uIOq9XZfChDQXtifYW39t27d9IJrUMC" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mathematics Category -->
+            <div class="book-category" id="رياضيات" style="display:none;">
+                <div class="book-item">
+                    <img src="images/تحليل رياضي.PNG" alt="تحليل رياضي" onclick="window.open('https://drive.google.com/file/d/1w8KTAO2rQsCHYJgHLUgau5RR1_RgOdk3/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>تحليل رياضي</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=1w8KTAO2rQsCHYJgHLUgau5RR1_RgOdk3" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <img src="images/الجبر.jpg" alt="الجبر" onclick="window.open('https://drive.google.com/file/d/1zwgnsIFvJzaOWxbGnUlruCoW9AzDOVJ0/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>الجبر</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=1zwgnsIFvJzaOWxbGnUlruCoW9AzDOVJ0" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <img src="images/هندسة رياضية.PNG" alt="هندسة رياضية" onclick="window.open('https://drive.google.com/file/d/1VpiuKgFcxwgdoTTl64MtWClofU9M7Kbd/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>هندسة رياضية</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=1VpiuKgFcxwgdoTTl64MtWClofU9M7Kbd" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Computer Science Applied Category -->
+            <div class="book-category" id="علوم-الحاسوب-التطبيقية" style="display:none;">
+                <div class="book-item">
+                    <img src="images/شبكات حاسوبية.jpg" alt="الشبكات الحاسوبية" onclick="window.open('https://drive.google.com/file/d/103IzP7pGaTUSuKS_P_2SVuo-dzW0-3AR/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>الشبكات الحاسوبية</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=103IzP7pGaTUSuKS_P_2SVuo-dzW0-3AR" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <img src="images/قواعد البيانات.jpg" alt="قواعد البيانات" onclick="window.open('https://drive.google.com/file/d/18hMwwgkvlGch9LRyMb-2fLQ1zDzmXacW/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>قواعد البيانات</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=18hMwwgkvlGch9LRyMb-2fLQ1zDzmXacW" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Computer Science Category -->
+            <div class="book-category" id="علوم-الحاسوب" style="display:none;">
+                <div class="book-item">
+                    <img src="images/ذكاء اصطناعي.jpg" alt="الذكاء الاصطناعي" onclick="window.open('https://drive.google.com/file/d/12MsqFKMQVmxL8PAEEfZoh37L9r3i7u2n/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>الذكاء الاصطناعي</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=12MsqFKMQVmxL8PAEEfZoh37L9r3i7u2n" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <img src="images/برمجة.jpg" alt="البرمجة" onclick="window.open('https://drive.google.com/file/d/1SvCXIXyOAafxGOwKL9L8ptMgjKaHQByU/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>البرمجة</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=1SvCXIXyOAafxGOwKL9L8ptMgjKaHQByU" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <img src="images/هياكل بيانات.jpg" alt="هياكل البيانات" onclick="window.open('https://drive.google.com/file/d/1UUDOnALkra4_QhlJqmDfA8XmWHiV_uge/preview', '_blank')" style="cursor: pointer;">
+                    <div class="book-details">
+                        <h3>هياكل البيانات</h3>
+                        <a href="https://drive.google.com/uc?export=download&id=1UUDOnALkra4_QhlJqmDfA8XmWHiV_uge" class="download-btn" target="_blank">تحميل</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>مكتبة كلية العلوم الرياضية والحاسوب - جامعة الجزيرة</p>
+            </div>
+            <div class="footer-right">
+                <!-- <h2>تواصل معنا</h2>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div> -->
+                <p>© 2025 جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
